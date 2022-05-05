@@ -29,16 +29,20 @@ function render(variables = {}) {
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
-  let name = variables.name;
-  if (variables.name == null) name = "Your name";
-  let lastname = variables.lastname;
-  if (variables.lastname == null) lastname = "Your lastname";
+  let nombre = variables.nombre;
+  if (variables.nombre == null) nombre = "Your name";
+  let apellidos = variables.apellidos;
+  if (variables.apellidos == null) apellidos = "Your lastname";
   let role = variables.role;
   if (variables.role == null) role = "Web Developer";
-  let city = variables.city;
-  if (variables.city == null) city = "Miami";
-  let country = variables.country;
-  if (variables.country == null) country = "USA";
+  let ciudad = variables.ciudad;
+  if (variables.ciudad == null) ciudad = "Miami";
+  let pais = variables.pais;
+  if (variables.pais == null) pais = "USA";
+
+  let email = variables.email;
+  if (variables.email == null) email = "";
+
   let twitter = variables.twitter;
   if (variables.twitter == null) twitter = "";
   let github = `${variables.github}`;
@@ -60,7 +64,7 @@ function render(variables = {}) {
           <ul class="position-right">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://linkedin.com/in/jose-luis-rozpide-herreros-b9b12725">Lkd<i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
@@ -85,7 +89,7 @@ window.onload = function() {
     github: "alesanchezr",
     linkedin: null,
     instagram: null,
-    name: null,
+    nombre: null,
     lastname: null,
     role: null,
     country: null,
