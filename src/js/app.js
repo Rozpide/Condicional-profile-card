@@ -1,3 +1,4 @@
+import { right } from "@popperjs/core";
 import "../style/index.css";
 
 /**
@@ -28,14 +29,34 @@ function render(variables = {}) {
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
+  let name = variables.name;
+  if (variables.name == null) name = "Your name";
+  let lastname = variables.lastname;
+  if (variables.lastname == null) lastname = "Your lastname";
+  let role = variables.role;
+  if (variables.role == null) role = "Web Developer";
+  let city = variables.city;
+  if (variables.city == null) city = "Miami";
+  let country = variables.country;
+  if (variables.country == null) country = "USA";
+  let twitter = variables.twitter;
+  if (variables.twitter == null) twitter = "";
+  let github = `${variables.github}`;
+  if (variables.github == null) github = "";
+  let linkedin = variables.linkedin;
+  if (variables.linkedin == null) linkedin = "";
+  let instagram = variables.instagram;
+  if (variables.instagram == null) instagram = "";
+  let socialMediaPosition = variables.socialMediaPosition;
+  if (variables.socialMediaPosition == right) socialMediaPosition = "";
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
-          <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
+          <img src="electricista.jpg" class="photo" />
+          <h1>Jose Luis Ròzpide</h1>
           <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
+          <h3>Catoira, España</h3>
           <ul class="position-right">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
